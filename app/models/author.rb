@@ -6,7 +6,7 @@ class Author
   # Class Variables
   @@all = []
   # Instance methods
-  def initialize(name:)
+  def initialize(name)
     @name = name
     @@all << self
   end

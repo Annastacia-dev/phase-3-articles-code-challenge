@@ -6,7 +6,7 @@ class Magazine
   # Class variables
   @@all = []
   # Instance methods
-  def initialize(name:, category:)
+  def initialize(name, category)
     @name = name
     @category = category
     @@all << self

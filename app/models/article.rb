@@ -4,7 +4,7 @@ class Article
     # Class variables
     @@all = []
     # Instance methods
-    def initialize(author:, magazine:, title:)
+    def initialize(author, magazine, title)
         @author = author
         @magazine = magazine
         @title = title
