@@ -1,4 +1,5 @@
 require_relative './article'
+require_relative './author'
 
 class Magazine 
   # Instance variables
@@ -25,8 +26,10 @@ class Magazine
   end
 
   def contributing_authors
-    self.contributors.filter {|author|author.articles.count > 2}
-  end 
+    magazine_authors = self.articles.map {|article| article.author}
+    authors =  magazine_authors.uniq
+    authors.filter {|author|  magazine_authors.count(author) > 2}
+  end
   # Class methods
   def self.all
     @@all
